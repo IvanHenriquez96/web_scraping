@@ -1,7 +1,13 @@
 export default async function Page({ params }: any) {
   const data = await getData(params.idJuego);
 
-  const ultimo_precio = data.prices[data.prices.length - 2];
+  let ultimo_precio = { actual_price: 0 };
+  if (data.prices[data.prices.length - 2]) {
+    ultimo_precio = data.prices[data.prices.length - 2];
+  } else {
+    ultimo_precio = data.prices[data.prices.length - 1];
+  }
+
   // console.log(ultimo_precio);
 
   return (
