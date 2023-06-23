@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <div className="text-gray-50 body-font">
+    <div className="text-gray-50 body-font bg-slate-900  border-b-2">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link href={"/"} className="mr-5 hover:text-gray-200">
           <h2>IHENRIQUEZ</h2>
@@ -21,7 +21,7 @@ export const Navbar = () => {
           <a className="mr-5 hover:text-gray-200">Third Link</a>
           <a className="mr-5 hover:text-gray-200">Fourth Link</a> */}
         </nav>
-        <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+        <button className="inline-flex items-center  border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
           Button
           <svg
             fill="none"

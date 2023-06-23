@@ -18,7 +18,10 @@ export const CardJuego: React.FC<CardPropsInterface> = ({
       <div className="p-2 md:w-1/3 text-white hover:scale-105 ease-in duration-100">
         <Link href={`infoJuego/${id}`}>
           <div className="grid  grid-cols-2 m-2 border rounded-lg">
-            <img className="rounded-lg" src={url_image} alt={title} />
+            <div className="rounded-full overflow-hidden w-36 h-36 flex justify-center items-center mx-auto my-auto border-4 border-tema_rojo">
+              <img src={url_image} alt={title} />
+            </div>
+
             <div className="p-4">
               <h2 className="font-bold">{title}</h2>
 

@@ -12,6 +12,7 @@ export default async function Page({ params }: any) {
 
   return (
     <div className="md:mx-32 mx-6 animate-fade">
+      <br /> <br />
       <div className="grid md:grid-cols-3">
         <div>
           <img className="mx-auto " src={data.url_image} alt={data.title} />
