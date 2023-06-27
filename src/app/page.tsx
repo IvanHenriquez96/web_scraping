@@ -19,8 +19,8 @@ export default async function Home() {
   const { data } = await getData();
   console.log(data);
   return (
-    <main className="bg-tema_bg text-tema_letra animate-fade">
-      <h1 className="text-center py-5 text-3xl font-bold">
+    <main className="bg-indigo-950 text-tema_letra animate-fade">
+      <h1 className="text-center my-10 text-3xl font-bold">
         Web Scraping - Listado de Juegos
       </h1>
 
