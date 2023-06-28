@@ -2,11 +2,18 @@
 
 import { useState } from "react";
 
+interface Juego {
+  title: string;
+  actual_price: string;
+  url_image: string;
+  tienda: string;
+}
+
 export const FormularioAgregar = () => {
   const [url, setUrl] = useState("");
   const [errores, setErrores] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [datosJuego, setDatosJuego] = useState(null);
+  const [datosJuego, setDatosJuego] = useState<Juego | null>(null);
 
   const agregarJuego = () => {
     let err: any = [];
@@ -121,7 +128,6 @@ export const FormularioAgregar = () => {
                   <span className="font-semibold">Precio:</span> {datosJuego.actual_price}
                 </p>
                 <p className="w-12/12 md:my-10 my-3">
-                  {" "}
                   <span className="font-semibold">Tienda:</span> {datosJuego.tienda}
                 </p>
               </div>
