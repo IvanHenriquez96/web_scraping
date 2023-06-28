@@ -44,6 +44,8 @@ export default async function Page({ params }: any) {
 async function getData(idJuego: string) {
   const res = await fetch(`http://45.236.128.210:3031/api/${idJuego}`);
 
+  console.log(res);
+
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
