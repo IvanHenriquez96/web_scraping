@@ -3,7 +3,7 @@ import { CardJuego } from "./components/CardJuego";
 import Link from "next/link";
 
 async function getData() {
-  const res = await fetch(`http://45.236.128.210:3031/api/`, {
+  const res = await fetch(`https://www.ihenriquez.lat/api/`, {
     cache: "no-store", // I also tried "no-cache",
   });
 

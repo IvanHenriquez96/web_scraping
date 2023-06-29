@@ -45,7 +45,7 @@ export const FormularioAgregar = () => {
       url_game: url,
     };
 
-    let result = await fetch(`http://45.236.128.210:3031/api/`, {
+    let result = await fetch(`https://ihenriquez.lat/api/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

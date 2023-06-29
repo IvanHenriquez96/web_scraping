@@ -42,7 +42,7 @@ export default async function Page({ params }: any) {
 }
 
 async function getData(idJuego: string) {
-  const res = await fetch(`http://45.236.128.210:3031/api/${idJuego}`);
+  const res = await fetch(`https://ihenriquez.lat/api/${idJuego}`);
 
   console.log(res);
 
