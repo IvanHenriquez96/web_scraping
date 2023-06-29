@@ -20,13 +20,25 @@ export default async function Home() {
   console.log(data);
   return (
     <main className="bg-indigo-950 text-tema_letra animate-fade">
-      <h1 className="text-center my-10 text-3xl font-bold">
-        Web Scraping - Listado de Juegos
-      </h1>
+      <h1 className="text-center my-10 text-3xl font-bold">Listado de Productos</h1>
 
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap -m-4">
+        <div className="container px-5  mx-auto">
+          {/* <div className="flex flex-wrap -m-4">
+            {data.map((juego: any) => {
+              return (
+                <CardJuego
+                  key={juego._id}
+                  id={juego._id}
+                  title={juego.title}
+                  url_image={juego.url_image}
+                  actual_price={juego.actual_price}
+                />
+              );
+            })}
+          </div> */}
+
+          <div className="grid md:grid-cols-3">
             {data.map((juego: any) => {
               return (
                 <CardJuego
