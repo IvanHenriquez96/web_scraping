@@ -1,21 +1,37 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
+  const currentRoute = usePathname();
+
+  console.log(currentRoute);
+
   return (
     <div className="text-gray-50 body-font bg-indigo-900  border-b-2 font-semibold">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <Link href={"/"} className="mr-5 hover:text-gray-200">
+        <Link href={"/"} className={`mr-5 hover:text-gray-200`}>
           <h2>IHENRIQUEZ</h2>
         </Link>
         {/* <a className="flex title-font font-medium items-center text-gray-50 mb-4 md:mb-0">
           <h2>IHENRIQUEZ</h2>
         </a> */}
         <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-          <Link href={"/"} className="mr-5 hover:text-gray-200">
+          <Link
+            href={"/"}
+            className={`mr-5 hover:text-gray-200 px-2 py-1 rounded-lg ${
+              currentRoute == "/" && "bg-yellow-600 "
+            }`}
+          >
             Inicio
           </Link>
-          <Link href={"/agregarJuego"} className="mr-5 hover:text-gray-200">
-            Agregar nuevo Juego
+          <Link
+            href={"/agregarJuego"}
+            className={`mr-5 hover:text-gray-200 px-2 py-1 rounded-lg ${
+              currentRoute == "/agregarJuego" && "bg-yellow-600 "
+            }`}
+          >
+            Agregar Producto
           </Link>
           {/* <a className="mr-5 hover:text-gray-200">Second Link</a>
           <a className="mr-5 hover:text-gray-200">Third Link</a>
