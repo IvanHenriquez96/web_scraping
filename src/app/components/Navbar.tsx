@@ -20,15 +20,15 @@ export const Navbar = () => {
           <Link
             href={"/"}
             className={`mr-5 hover:text-gray-200 px-2 py-1 rounded-lg ${
-              currentRoute == "/" && "bg-yellow-600 "
+              currentRoute == "/" ? "bg-yellow-600 " : "bg-indigo-900"
             }`}
           >
             Inicio
           </Link>
           <Link
             href={"/agregarJuego"}
-            className={`mr-5 hover:text-gray-200 px-2 py-1 rounded-lg ${
-              currentRoute == "/agregarJuego" && "bg-yellow-600 "
+            className={`mr-5 hover:text-gray-200 px-2 py-1  rounded-lg ${
+              currentRoute == "/agregarJuego" ? "bg-yellow-600 " : "bg-indigo-900"
             }`}
           >
             Agregar Producto
