@@ -1,15 +1,9 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
 
 export const Navbar = () => {
   const currentRoute = usePathname();
-
-  useEffect(() => {
-    console.log("test effect");
-  }, [currentRoute]);
 
   return (
     <div className="text-gray-50 body-font bg-indigo-900  border-b-2 font-semibold">
