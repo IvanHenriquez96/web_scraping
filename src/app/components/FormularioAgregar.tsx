@@ -95,7 +95,7 @@ export const FormularioAgregar = () => {
 
           <button
             onClick={agregarJuego}
-            className={`bg-yellow-500 font-bold my-5 px-4 py-2 rounded-lg ${
+            className={`bg-yellow-500 font-bold my-5 px-4 py-2 rounded-lg hover:bg-yellow-600 ${
               isLoading && "bg-yellow-600 animate-pulse"
             }`}
             disabled={isLoading}
