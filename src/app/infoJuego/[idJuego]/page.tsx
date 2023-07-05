@@ -1,8 +1,12 @@
+// "use client";
+
+import LineChart from "@/app/components/LineChart";
+
 export default async function Page({ params }: any) {
+  //Get Data
   const data = await getData(params.idJuego);
 
-  console.log(data);
-
+  //Obteniendo Ultimo precio
   let ultimo_precio = { actual_price: 0 };
   if (data.prices[data.prices.length - 2]) {
     ultimo_precio = data.prices[data.prices.length - 2];
@@ -10,7 +14,13 @@ export default async function Page({ params }: any) {
     ultimo_precio = data.prices[data.prices.length - 1];
   }
 
-  // console.log(ultimo_precio);
+  const fechas_chart: string[] = [];
+  const precios_chart: string[] = [];
+
+  data.prices.forEach((price: any) => {
+    fechas_chart.push(price.fecha_hora);
+    precios_chart.push(price.actual_price);
+  });
 
   return (
     <div className="md:mx-32 mx-6 animate-fade">
@@ -46,6 +56,10 @@ export default async function Page({ params }: any) {
               </button>
             </a>
           </div>
+
+          <div className="bg-indigo-900 my-5 p-4 rounded-lg ">
+            <LineChart fechas={fechas_chart} precios={precios_chart} />
+          </div>
         </div>
       </div>
     </div>
@@ -53,7 +67,9 @@ export default async function Page({ params }: any) {
 }
 
 async function getData(idJuego: string) {
-  const res = await fetch(`https://ihenriquez.lat/api/${idJuego}`);
+  const res = await fetch(`https://ihenriquez.lat/api/${idJuego}`, {
+    cache: "no-store", // I also tried "no-cache",
+  });
 
   console.log(res);
 

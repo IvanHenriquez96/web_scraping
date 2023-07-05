@@ -14,7 +14,7 @@ const InfoAgregarProducto = () => {
           !isOpen && "rounded-b-lg"
         }`}
       >
-        <p className="font-semibold">¿Como Agrego un producto?</p>
+        <p className="font-semibold">¿Como agrego un producto?</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
